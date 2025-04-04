@@ -39,3 +39,7 @@ server.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);  // ✅ Use template literals
   connectDB();
 });
+
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
