@@ -1,5 +1,5 @@
 import axios from "axios";
-import { axiosInstance } from "./axios";
+import { axiosInstance } from "./lib/axios";
 
 export const axiosInstance = axios.create({
   baseURL: import.meta.env.MODE === "development"
