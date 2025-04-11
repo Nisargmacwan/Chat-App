@@ -7,9 +7,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://chatty-lf2p.onrender.com"],
+    origin: ["https://chat-app-7k10.onrender.com"], // ✅ use your frontend URL
+    credentials: true, // ✅ allows cookies to be sent
   },
 });
+
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];
