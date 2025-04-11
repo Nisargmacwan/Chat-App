@@ -1,6 +1,6 @@
-import axios from "axios";
-
 export const axiosInstance = axios.create({
-  baseURL: "https://chatty-lf2p.onrender.com", // Always use full backend URL
+  baseURL: import.meta.env.MODE === "development"
+    ? "http://localhost:5000" // your local dev backend
+    : "https://chatty-lf2p.onrender.com", // your live backend
   withCredentials: true,
 });
