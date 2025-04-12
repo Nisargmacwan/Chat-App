@@ -7,10 +7,11 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://chat-app-7k10.onrender.com"],
+    origin: "https://chat-app-7k10.onrender.com",
     credentials: true,
   },
 });
+
 
 export function getReceiverSocketId(userId) {
   return userSocketMap[userId];

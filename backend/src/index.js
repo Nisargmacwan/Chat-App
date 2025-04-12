@@ -19,10 +19,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["https://chat-app-7k10.onrender.com"], //frontend URL
+    origin: "https://chat-app-7k10.onrender.com",
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
