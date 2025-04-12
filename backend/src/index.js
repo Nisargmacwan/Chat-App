@@ -19,10 +19,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://chat-app-7k10.onrender.com",
+    origin: "https://chat-app-7k10.onrender.com", // ✅ exact frontend domain
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
